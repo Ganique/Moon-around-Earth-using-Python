@@ -35,7 +35,7 @@ def moon(radius_X, radius_Y, radius_Z, n=100):
     Z =  radius_Z* np.cos(V)
 
     return X, Y, Z
-# In order to show the animation of Moon and Earth, we ARBITRAIRLY choose the distance moon-earth to 38.44. If we take 384.4 as the distance moon-earth, we will not see the animation.
+# In order to show the animation of Moon and Earth, we ARBITRARILY choose the distance moon-earth to 38.44. If we take 384.4 as the distance moon-earth, we will not see the animation.
 def revolution(t, R_orbit=38.44, omega_orbit=0.1): #omega_orbit is the angular velocity of moon around the earth. The real value of the angular velocity of the Moon around the Earth is closed to 0.000003106 rad/s. If we take 0.000003106 rad/s as the angular velocity, the Moon will take more than 23 days to turn around the Earth.
     a, b = 1, 0.75 #The trajectory of Moon around the Earth is globally elliptical. a is the half major axis and b is the half small axis.
     x = a*R_orbit * np.cos(omega_orbit * t)
@@ -88,4 +88,5 @@ def update(frame):
 
 ani = FuncAnimation(fig, update, frames=300, interval=50)
 plt.show()
+
 
